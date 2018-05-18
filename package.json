@@ -1,0 +1,28 @@
+{
+  "name": "e-food",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "none",
+  "author": "Nechirvan Ibrahim Hasan",
+  "license": "MIT License",
+  "scripts": {
+    "test": "mocha || true",
+    "start": "node main.js",
+    "watch": "nodemon main && mongod"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "*",
+    "connect-mongo": "*",
+    "errorhandler": "^1.5.0",
+    "express": "^4.16.3",
+    "express-session": "*",
+    "mongoose": "*"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "mocha": "^5.1.1",
+    "request": "^2.85.0"
+  }
+}

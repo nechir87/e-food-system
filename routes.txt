@@ -1,0 +1,144 @@
+All routes for manager
+
+1. Manager Login 
+	/api/mgrlogin	method=POST Body={logmgr_name, logpassword}
+
+2. Manager Profile
+	/api/mgrprofile		method=GET 
+
+3. Manager Update 
+	/api/mgrupdate		method=PUT 		update body { password, first_name, last_name }
+	
+4. Delete account
+	/api/mgrdelete		method=DELETE 	 don't need to send any ID 
+
+5. Add new item to menu 
+	/api/mgrmenu		method=POST 	body={dish_name, img_url, price(Number), ingredient, diabetes(Boolean)}
+
+6. Get his/her menu 
+	/api/mgrmenus		method=GET
+	
+7. Get one item from his/her menu
+	/api/mgrmenu/"ID"	send ID of the item		method=GET
+	
+8. Update an item 
+	/api/mgrmenu/"ID"		method=PUT		update body={dish_name, img_url, price, ingredient, diabetes}
+	
+9. Delete an item from his/her menu
+	/api/mgrmenu/"ID"		method=DELETE
+	
+10. Get his/her order list
+	/api/mgrorderlist		method=GET
+	
+11. Get his/her delivered list
+	/api/mgrdeliveredlist		method=GET
+	
+12. Add deliver from order list (which means an ordered has been delivered)
+	/api/mgrsentdeliver		method=POST 	body = {dish, username, rest_name, check_no(Number), address, order_date(date), delivered(Boolean)=true}
+	
+13. Manager Logout
+	/api/mgrlogout		method=GET
+	
+--------------------------------------
+Admin part
+
+1. Admin Login
+	/api/admin/login		method=POST		body={logadmin, logpassword} use "admin1" password "admin"
+
+2. Admin profile
+	/api/admin/profile		method=GET
+	
+3. Admin adds new manager
+	/api/admin/addmanager		method=POST		body={mgr_name, password, passwordConf, first_name, last_name, rest_name}
+	
+4. Admin gets list of all managers
+	/api/admin/getmanagers		method=GET
+
+5. Admin gets one manager by ID
+	/api/admin/getmanager/"ID"		method=GET
+	
+6. Admin deletes a manager by ID
+	/api/admin/removemanager/"ID"		method=DELETE
+	
+7. Admin adds new user 
+	/api/admin/adduser			method=POST		body={username, password, passwordConf, first_name, last_name, address}
+	
+8. Admin gets list of all users
+	/api/admin/getusers			method=GET
+
+9. Admin gets one user by ID
+	/api/admin/getuser/"ID"		method=GET
+	
+	
+10. Admin delete a user by ID
+	/api/admin/removeuser/"ID"		method=DELETE
+	
+
+11. Admin adds new restaurant 
+	/api/admin/addrestaurant	method=POST		body={rest_name, address}
+	
+
+12. Admin gets a list of restaurants
+	/api/admin/getrestaurants		method=GET
+	
+13. Admin gets one restaurant by ID
+	/api/admin/getrestaurant/"ID"
+	
+
+14. Admin updates a restaurant
+	/api/admin/updaterestaurant/"ID"	method=PUT		update body={rest_name, address}
+	
+
+15. Admin deletes a restaurant by ID
+	/api/admin/removerestaurant/"ID"	method=DELETE
+	
+
+16. Admin gets pending order from all restaurants
+	/api/admin/getpendingorders			method=GET
+	
+17. Admin gets one pending order by it's ID
+	/api/admin/getpendingorder/"ID"		method=GET
+	
+18. Admin gets delivered list from all restaurant
+	/api/admin/getdelivers		method= GET
+	
+
+19. Admin gets one delivered by it's ID
+	/api/admin/getdeliver/"ID"			method=GET
+	
+	
+20. Admin gets all checks(transactions) 
+	/api/admin/getchecks		method = GET
+	
+	
+21. Admin gets single check by ID
+	/api/admin/getcheck/"ID"		method=GET
+	
+
+22. Admin gets single check by it's Number
+	/api/admin/getcheck		method=POST		body={checkNo}
+	
+	
+23. Admin get messages from Inbox
+	/api/admin/inbox		method=GET
+	
+	
+24. admin gets one message by it's ID
+	/api/admin/inbox/"ID"		method=GET
+	
+
+25. admin deletes a message from inbox by it's ID
+	/api/admin/inbox/"ID"		method=DELETE
+	
+
+26. Admin Logout
+	/api/admin/logout		method=GET
+	
+	
+
+
+
+
+
+
+

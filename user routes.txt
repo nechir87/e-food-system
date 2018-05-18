@@ -1,0 +1,61 @@
+1. For login user 
+The http is /api/userlogin the method is POST and the required parameter are “logusername” and “logpassword”
+
+2. For register users is the same http /api/userlogin but the body is different {
+usernam, password, 
+passwordConf, first_name, 
+last_name, address
+}
+
+3. /api/userprofile is a GET http request but the user should be logged in
+
+4. Update user 
+/api/userupdate is a PUT request the request body should be
+{
+first_name, 
+last_name, 
+address, 
+password
+}
+You dont need to send the id because, i bring it from session.
+
+5. Delete user
+/api/userdelete is a DELETE request dont need parameters because iam getting id from session
+
+6. Get dishes  /api/userdishes is a GET request
+
+7. We another route for dishes if user want to search by dish name. 
+/api/userfavoritedish
+The method is POST and request body is only 
+{
+dname
+}
+
+8. For placing an order 
+/api/userorder  the method is POST request body is 
+{
+dish:
+rest_name:
+price:
+address:
+}
+Dish is dish name
+Rest_name is restaurant name
+Address is option here .
+And this information is available for user from menu the only thing user could add is address
+
+9. We have a route for user to know how many order he has required /api/userpendingorders it is a GET request
+
+10. And another route for getting delivers 
+/api/userdelivers its a GET request
+
+11. And we have a logout 
+/api/userlogout its a GET request
+
+12. the last one is contact us. /api/contactus it's a POST request and the body is {sernder, subject, content}
+the sender is email, subject is subject of mail and content is the body of message. 
+
+
+
+
+
